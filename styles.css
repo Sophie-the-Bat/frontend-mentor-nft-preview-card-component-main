@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+@font-face {
+    font-family: Outfit, sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+}
+
+body {
+    --bg-container: hsl(216, 54%, 11%);
+    --bg-card: hsl(216, 50%, 16%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Outfit;
+}
+
+.container {
+    background-color: var(--bg-container);
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    border-radius: 1rem;
+    max-width: 20rem;
+    background-color: var(--bg-card);
+    padding: 2rem;
+    color:hsl(215, 51%, 70%);
+    margin: 2rem;
+    font-weight: 300;
+}
+
+.card__image-container {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.card__image {
+   width: 100%;
+   position: relative;
+   display: block;
+}
+
+.card__image-overlay {
+    position: absolute;
+    background-color: rgba(0, 255, 247, 0);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.card__image-overlay:hover {
+    background-color: rgba(0, 255, 247, 0.2);
+    background-image: url(./images/icon-view.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.card__header {
+    padding-block: 1rem;
+    color: hsl(0, 0%, 100%);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.card__header:hover {
+    color:hsl(178, 100%, 50%);
+}
+
+/*.card__description {
+   
+}
+*/
+
+.card__info {
+    margin-block: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__price {
+    color:hsl(178, 100%, 50%);
+    font-weight: 400;
+}
+
+.card__price,
+.card__date {
+    display: flex;
+}
+
+.card__price::before {
+    content: url("./images/icon-ethereum.svg");
+    margin-right: 0.3rem;
+}
+
+.card__date::before {
+    content: url("./images/icon-clock.svg");
+    margin-right: 0.2rem;
+}
+
+.card__author {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card__author::before {
+    content:"";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: currentColor;
+    margin-bottom: 1rem;
+}
+
+.card__author-avatar {
+    display: inline;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 100rem;
+    border: 1px solid white;
+    margin-right: 1rem;
+}
+
+.card__author-name {
+    line-height: 1.75;
+    font-weight: 400;
+}
+
+.card__author-name span {
+    color:  hsl(0, 0%, 100%);
+}
+
+.card__author-name span:hover {
+    color:hsl(178, 100%, 50%);
+}
